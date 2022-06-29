@@ -11,24 +11,30 @@ import HeaderComp from "../src/components/HeaderComp.vue";
 
 <style>
 @import "@/assets/base.css";
+@import "@/assets/style.css";
+
 
 #app {
-  max-width: 1280px;
+  max-width: 1580px;
   margin: 0 auto;
-  padding: 2rem;
-
   font-weight: normal;
+  height: 100vh;
 }
-
 header {
-  line-height: 1.5;
-  max-height: 100vh;
+  background-color: rgba(140, 81, 170, 0.816);
+  color: rgb(255, 255, 255);
+  height: 15%;
+  font-size: 1.8em;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
 }
-
-a,
-.green {
+main {
+  height: 70%;
+}
+a {
+  color: inherit;
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+  height: 10%;
 }
 </style>
