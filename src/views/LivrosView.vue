@@ -4,11 +4,38 @@ export default {
   data() {
     return {
       novo_livro: "",
+      novo_autor: "",
+      nova_editora: "",
+      nova_categoria: "",
       livros: [
-        { id: "bbf13e16-8a92-49da-b37b-9f1f218bc384", name: "Livro 1" },
-        { id: "46ec141f-f35b-4e50-b60d-3db9d6a6022a", name: "Livro 2" },
-        { id: "6392406d-6273-44fd-814b-c45f4c6aed9f", name: "Livro 3" },
-        { id: "978145ff-0026-475e-adc7-5029786bb6ce", name: "Livro 4" },
+        {
+          id: "ac803529-5e2d-45b2-a907-ca993bb301ea",
+          livro: "Harry Potter e a Pedra  Filosofal",
+          autor: "J.K Rowling",
+          editora: "f",
+          categoria: "nao sei1",
+        },
+        {
+          id: "f0532191-04bb-44fe-be8b-8449ce321169",
+          livro: "A sombra do vento",
+          autor: "Carlos Ruíz Zafón",
+          editora: "b",
+          categoria: "nao sei2",
+        },
+        {
+          id: "29eaba8d-a376-485e-9509-5dddd6587f0d",
+          livro: "O caçador de pipas",
+          autor: "Khaled Hosseini",
+          editora: "dr",
+          categoria: "nao sei 3",
+        },
+        {
+          id: "d7c068f0-928f-4858-9ae3-eadc32edb230",
+          livro: "Anjo da escuridão",
+          autor: "Sidney Sheldon",
+          editora: "gg",
+          categoria: "nao sei 4",
+        },
       ],
     };
   },
@@ -18,64 +45,89 @@ export default {
         const novo_id = uuid();
         this.livros.push({
           id: novo_id,
-          name: this.novo_livro,
+          nome_livro: this.novo_livro,
+          autor: this.novo_autor,
+          editora: this.nova_editora,
+          categoria: this.nova_categoria,
         });
         this.novo_livro = "";
+        this.novo_autor = "";
+        this.nova_editora = "";
+        this.nova_categoria = "";
       }
     },
     excluir(livro) {
       const indice = this.livros.indexOf(livro);
       this.livros.splice(indice, 1);
     },
+    alerta() {
+      alert("ok");
+    },
   },
 };
 </script>
+
 <template>
-  <div class="container">
-    <div class="title">
-      <h2>Gerenciamento de livros</h2>
+  <div class="conteudo">
+    <div class="titulo">
+      <h2>Gerencimento de Livros</h2>
     </div>
-    <div class="form-input">
-      <input
-        type="text"
-        v-model="novo_categoria"
-        @keyup.enter="salvar"
-        placeholder="Categorias"
-      />
+    <div class="input-form">
       <input
         type="text"
         v-model="novo_livro"
         @keyup.enter="salvar"
         placeholder="Livros"
       />
+      <input
+        type="text"
+        v-model="novo_autor"
+        @keyup.enter="salvar"
+        placeholder="Autores"
+      />
+      <input
+        type="text"
+        v-model="nova_editora"
+        @keyup.enter="salvar"
+        placeholder="Editoras"
+      />
+      <input
+        type="text"
+        v-model="nova_categoria"
+        @keyup.enter="salvar"
+        placeholder="Categorias"
+      />
       <button @click="salvar">Salvar</button>
     </div>
-  </div>
-  <div class="list-items">
-    <table>
-      <thead>
-        <tr>
-          <td>ID</td>
-          <td>Nome</td>
-          <td>Categorias</td>
-          <td>Ações</td>
-        </tr>
-      </thead>
+    <div class="itens-lista">
+      <table>
+        <thead>
+          <tr>
+            <td>ID</td>
+            <td>Livros</td>
+            <td>Autores</td>
+            <td>Editoras</td>
+            <td>Categorias</td>
+            <td>Ações</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="livro in livros" :key="livro.id">
+            <td>{{ livro.id }}</td>
+            <td>{{ livro.nome_livro }}</td>
+            <td>{{ livro.autor }}</td>
+            <td>{{ livro.editora }}</td>
+            <td>{{ livro.categoria }}</td>
 
-      <tbody>
-        <tr v-for="livro in livros" :key="livro.id">
-          <td>{{ livro.id }}</td>
-          <td>{{ livro.name }}</td>
-          <td>{{ livro.categoria }}</td>
-          <td>
-            <button>Editar</button>
-            <button @click="excluir(categoria)">Apagar</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            <td>
+              <button class="botao" @click="alerta(livro)">Editar</button>
+              <button class="botao" @click="excluir(livro)">Excluir</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
-<style>
 
-</style>
+<style></style>
