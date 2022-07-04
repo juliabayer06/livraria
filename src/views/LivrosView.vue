@@ -10,31 +10,31 @@ export default {
       livros: [
         {
           id: "ac803529-5e2d-45b2-a907-ca993bb301ea",
-          livro: "Harry Potter e a Pedra  Filosofal",
-          autor: "J.K Rowling",
-          editora: "f",
-          categoria: "nao sei1",
+          livro: "É Assim que Acaba",
+          autor: "Colleen Hoover",
+          editora: "Galera",
+          categoria: "Romance",
         },
         {
           id: "f0532191-04bb-44fe-be8b-8449ce321169",
-          livro: "A sombra do vento",
-          autor: "Carlos Ruíz Zafón",
-          editora: "b",
-          categoria: "nao sei2",
+          livro: "A garota do lago",
+          autor: "Charlie Donlea",
+          editora: "Faro Editorial",
+          categoria: "Suspense",
         },
         {
           id: "29eaba8d-a376-485e-9509-5dddd6587f0d",
-          livro: "O caçador de pipas",
-          autor: "Khaled Hosseini",
-          editora: "dr",
-          categoria: "nao sei 3",
+          livro: "Orgulho e preconceito",
+          autor: "Jane Austen",
+          editora: "Principis",
+          categoria: "Romance",
         },
         {
           id: "d7c068f0-928f-4858-9ae3-eadc32edb230",
           livro: "Anjo da escuridão",
-          autor: "Sidney Sheldon",
-          editora: "gg",
-          categoria: "nao sei 4",
+          autor: "Tilly Bagshawe",
+          editora: "Record",
+          categoria: "Terror",
         },
       ],
     };
@@ -68,11 +68,11 @@ export default {
 </script>
 
 <template>
-  <div class="conteudo">
-    <div class="titulo">
+  <div class="container">
+    <div class="title">
       <h2>Gerencimento de Livros</h2>
     </div>
-    <div class="input-form">
+    <div class="form-input">
       <input
         type="text"
         v-model="novo_livro"
@@ -99,7 +99,7 @@ export default {
       />
       <button @click="salvar">Salvar</button>
     </div>
-    <div class="itens-lista">
+    <div class="list-items">
       <table>
         <thead>
           <tr>

@@ -1,5 +1,5 @@
 <template>
-    <header>
+  <header>
     <nav>
       <RouterLink to="/">Home</RouterLink> |
       <RouterLink to="/categorias">Categorias</RouterLink> |
