@@ -5,10 +5,10 @@ export default {
     return {
       novo_categoria: "",
       categorias: [
-        { id: "bbf13e16-8a92-49da-b37b-9f1f218bc384", name: "Categoria 1" },
-        { id: "46ec141f-f35b-4e50-b60d-3db9d6a6022a", name: "Categoria 2" },
-        { id: "6392406d-6273-44fd-814b-c45f4c6aed9f", name: "Categoria 3" },
-        { id: "978145ff-0026-475e-adc7-5029786bb6ce", name: "Categoria 4" },
+        { id: "bbf13e16-8a92-49da-b37b-9f1f218bc384", name: "Romance" },
+        { id: "46ec141f-f35b-4e50-b60d-3db9d6a6022a", name: "Suspence" },
+        { id: "6392406d-6273-44fd-814b-c45f4c6aed9f", name: "Romance" },
+        { id: "978145ff-0026-475e-adc7-5029786bb6ce", name: "Terror" },
       ],
     };
   },

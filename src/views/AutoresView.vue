@@ -8,23 +8,23 @@ export default {
       autores: [
         {
           id: "bbf13e16-8a92-49da-b37b-9f1f218bc384",
-          name: "Autor 1",
-          idade: "90",
+          name: "Colleen Hoover",
+          idade: "42 anos",
         },
         {
           id: "46ec141f-f35b-4e50-b60d-3db9d6a6022a",
-          name: "Autor 2",
-          idade: "44",
+          name: "Charlie Donlea",
+          idade: "44 anos",
         },
         {
           id: "6392406d-6273-44fd-814b-c45f4c6aed9f",
-          name: "Autor 3",
-          idade: "23",
+          name: "Jane Austen",
+          idade: "41 anos",
         },
         {
           id: "978145ff-0026-475e-adc7-5029786bb6ce",
-          name: "Autor 4",
-          idade: "57",
+          name: "Tilly Bagshawe",
+          idade: "49 anos",
         },
       ],
     };
