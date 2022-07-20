@@ -45,7 +45,7 @@ export default {
         const novo_id = uuid();
         this.livros.push({
           id: novo_id,
-          nome_livro: this.novo_livro,
+          nome: this.novo_livro,
           autor: this.novo_autor,
           editora: this.nova_editora,
           categoria: this.nova_categoria,
@@ -73,6 +73,7 @@ export default {
       <h2>Gerencimento de Livros</h2>
     </div>
     <div class="form-input">
+      <input type="text" v-model="novo_livro" placeholder="Nome do livro" />
       <input
         type="text"
         v-model="novo_livro"
